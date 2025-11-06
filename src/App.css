@@ -1,0 +1,124 @@
+/* App.css */
+
+/* Full-page healthy food background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://imgs.search.brave.com/ZUSr1TZj3NJ0vutL8irzPpsOrAZ9wQFIxmoC1wB76_Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vcGhvdG9z/L21peGVkLWJlcnJp/ZXMtcGljdHVyZS1p/ZDk1Njc2MTI3ND9r/PTIwJm09OTU2NzYx/Mjc0JnM9NjEyeDYx/MiZ3PTAmaD13RUxr/QUtJU2xmOVRwUGRQ/dzQwXzU3UHY5OU1p/NlFiVXR1eDNia3cy/cHhBPQ') no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Overlay to dim background for better readability */
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 25px;
+  color: #2e7d32; /* healthy green color */
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h3, h4 {
+  color: #333;
+  margin-top: 20px;
+}
+
+input, select {
+  width: 80%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #66bb6a;
+  box-shadow: 0 0 8px rgba(102, 187, 106, 0.5);
+}
+
+button {
+  background: #66bb6a; /* green button */
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  margin: 10px 5px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #43a047;
+  transform: scale(1.05);
+}
+
+.meal-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.meal-input input {
+  width: 150px;
+}
+
+.results {
+  margin-top: 25px;
+  text-align: left;
+  background: #f1f8e9; /* light green for healthy feel */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.results ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.results li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.results li::before {
+  content: "🍴 ";
+}
+
+ul li b {
+  color: #2e7d32;
+}
+
+select {
+  width: 85%;
+  margin-top: 10px;
+}
+
+@media (max-width: 650px) {
+  .meal-input {
+    flex-direction: column;
+  }
+
+  input, select {
+    width: 90%;
+  }
+}
